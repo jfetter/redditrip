@@ -22,5 +22,12 @@ router.post("/", function(req, res, next){
 	})
 })
 
+router.post("/login", function(req, res, next){
+	var loginUser = req.body;
+	User.authenticate(loginUser, function(err, authorization){
+		res.status(err ? 400 : 200).set("Authorization", `Bearer ${authorization}`).send(err || "ok")
+	})
+})
+
 
 module.exports = router;

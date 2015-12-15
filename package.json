@@ -7,6 +7,7 @@
     "test": "MONGOLAB_URI='mongodb://localhost/redditrip-test' && mocha test/acceptance test/unit"
   },
   "dependencies": {
+    "bcrypt": "^0.8.5",
     "body-parser": "~1.13.2",
     "chai": "^3.4.1",
     "chai-http": "^1.0.0",
