@@ -5,7 +5,7 @@ var User = require("../models/user");
 /* GET users listing. */
 router.get('/', function(req, res, next) {
 	User.find({}, function(err, allUsers){
-  res.send(allUsers);
+		res.status( err ? 400 : 200).send( err || allUsers)
 	})
 });
 

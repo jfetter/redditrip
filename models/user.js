@@ -16,7 +16,6 @@ userSchema.statics.authenticate = function(user, cb){
  	 if (err || !foundUser) return cb(err || "incorrect username or password")
  	 bcrypt.compare( user.password, foundUser.password, function(err, isGood){
  	 	if (err || !isGood) return cb(err || "invalid password or username")
-	 	console.log("FOUND THE MOTHA FUCKING USER", isGood,foundUser);
 	 	var token= jwt.encode(foundUser._id, process.env.JWT_SECRET)
 	 	cb(null, token)
  	 })
