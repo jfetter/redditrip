@@ -1,0 +1,23 @@
+{
+  "name": "redditrip",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "MONGOLAB_URI='mongodb://localhost/redditrip-test' && mocha test/acceptance test/unit"
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "chai": "^3.4.1",
+    "chai-http": "^1.0.0",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "ejs": "~2.3.3",
+    "express": "~4.13.1",
+    "jwt-simple": "^0.4.0",
+    "mocha": "^2.3.4",
+    "mongoose": "^4.3.1",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  }
+}
