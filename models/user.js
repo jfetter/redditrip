@@ -23,6 +23,7 @@ userSchema.statics.authenticate = function(user, cb){
 }
 
 userSchema.statics.addNewUser = function(newUser, cb){
+	console.log('cool shit', newUser);
 	let username = newUser.username;
 	let password = newUser.password;
 	let confirmPass = newUser.confirmPass;
