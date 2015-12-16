@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Captain Falcon",
+    "password": "u304joiwfeut90",
+    "_id": {"$oid": "0000000000000000000000a1"}
+  },
+  {
+    "name": "Dave",
+    "password": "08whefoi4weio",
+    "_id": {"$oid": "0000000000000000000000a2"}
+  }
+]

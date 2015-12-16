@@ -1,0 +1,11 @@
+[
+  {
+    "_id": {"$oid": "000000000000000000000001"},
+    "user": {"$oid": "0000000000000000000000a1"},
+    "title": "This is not a post",
+    "content": "This is definitely NOT the content",
+    "comments": [],
+    "time": "1450246219410",
+    "score":"0"
+  }
+]
