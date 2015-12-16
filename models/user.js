@@ -22,8 +22,7 @@ userSchema.statics.authenticate = function(user, cb){
 	})
 }
 
-userSchema.statics.addNewUser = function(newUser, cb){
-	console.log('cool shit', newUser);
+userSchema.statics.register = function(newUser, cb){
 	let username = newUser.username;
 	let password = newUser.password;
 	let confirmPass = newUser.confirmPass;
@@ -53,7 +52,6 @@ userSchema.statics.addNewUser = function(newUser, cb){
       });
 		})
 	})
-
 }
 
 User = mongoose.model("User", userSchema)

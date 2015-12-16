@@ -17,7 +17,7 @@ router.get('/deleteAll', function(req, res, next) {
 
 
 router.post("/", function(req, res, next){
-	User.addNewUser(req.body, function(err, newUser){
+	User.register(req.body, function(err, newUser){
 		res.status( err ? 400 : 200).send( err || newUser)
 	})
 })
