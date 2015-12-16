@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+<<<<<<< HEAD
     "test": "MONGO_URL='mongodb://localhost/redditrip-test' mocha test/acceptance"
+=======
+    "test": "MONGOLAB_URI='mongodb://localhost/redditrip-test' && mocha test/tests.js"
+>>>>>>> 1a3842695a2b2bf8d11e7c755b109f7ebab3adc6
   },
   "dependencies": {
     "async": "^1.5.0",

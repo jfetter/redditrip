@@ -6,7 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 
+<<<<<<< HEAD
 mongoose.connect(process.env.MONGO_URL || "mongodb://localhost/redditrip")
+=======
+mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost/redditrip")
+>>>>>>> 1a3842695a2b2bf8d11e7c755b109f7ebab3adc6
 
 var app = express();
 

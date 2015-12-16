@@ -11,6 +11,7 @@ var userSchema = Schema({
 	password: {type: String, required: true}
 })
 
+<<<<<<< HEAD
 userSchema.methods.token = function() {
   var payload = {
     _id: this._id,
@@ -18,6 +19,8 @@ userSchema.methods.token = function() {
   return jwt.encode(payload, process.env.JWT_SECRET);
 };
 
+=======
+>>>>>>> 1a3842695a2b2bf8d11e7c755b109f7ebab3adc6
 userSchema.statics.authenticate = function(user, cb){
 	User.findOne({username: user.username}, function(err, foundUser){
  	 if (err || !foundUser) return cb(err || "incorrect username or password")
@@ -40,11 +43,19 @@ userSchema.statics.register = function(newUser, cb){
 	User.findOne({username: username}, function(err, foundUser){
 		if (err) {
 			cb(err, null)
+<<<<<<< HEAD
 			return
 		}
 		if (foundUser) {
 			cb('username already taken!', null)
 			return
+=======
+			return 
+		}
+		if (foundUser) {
+			cb('username already taken!', null)
+			return 
+>>>>>>> 1a3842695a2b2bf8d11e7c755b109f7ebab3adc6
 		}
 		bcrypt.genSalt(13, function(err1, salt) {
       bcrypt.hash(password, salt, function(err2, hash) {
@@ -62,4 +73,8 @@ userSchema.statics.register = function(newUser, cb){
 }
 
 User = mongoose.model("User", userSchema)
+<<<<<<< HEAD
 module.exports = User;
+=======
+module.exports = User;
+>>>>>>> 1a3842695a2b2bf8d11e7c755b109f7ebab3adc6
